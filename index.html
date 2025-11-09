@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://ooosyooo.github.io/swimpilot-landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimPilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #05445e 0%, #189ab4 40%, #75e6da 70%, #189ab4 100%);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 25%, #b3e5fc 50%, #80deea 75%, #4dd0e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: fadeIn 1s ease forwards, gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .message {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            color: #ffffff;
+            border-bottom-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SwimPilot</h1>
+        <p class="message">깊이로 향하는 길</p>
+        <div class="spinner"></div>
+        <a href="https://ooosyooo.github.io/swimpilot-landing" class="link">Continue to SwimPilot</a>
+    </div>
+    <script>
+        window.location.href = "https://ooosyooo.github.io/swimpilot-landing";
+    </script>
+</body>
+</html>
